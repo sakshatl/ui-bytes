@@ -29,8 +29,13 @@ body {
   background-color: var(--bgColor-light);
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
-  max-width: 80%;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -67,6 +72,7 @@ body {
   background-color: var(--bgColor-light);
   box-shadow: 0 8px 20px hsla(19, 64%, 24%, .1);
   transition: top 0.4s;
+  z-index: 100;
 }
 
 .nav__menu__mobile__show {
@@ -104,6 +110,66 @@ body {
   font-size: 1.5rem;
 }
 
+/* HERO STYLES */
+
+.hero {
+  padding: 2rem 0;
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.hero__leftBranch {
+  opacity: 0.3;
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.hero__rightBranch {
+  opacity: 0.3;
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  top: 300px;
+  right: 0;
+  transform: rotate(280deg);
+}
+
+.hero__left h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero__left p {
+  font-size: 1.5rem;
+  color: var(--textColor);
+}
+
+.hero__left button {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primaryColor);
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.hero__left button i {
+  font-size: 1.25rem;
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     max-width: 100%;
@@ -117,6 +183,21 @@ body {
 
   .nav__buttons {
     display: block;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__left h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero__left p {
+    font-size: 1.25rem;
   }
 }
 
